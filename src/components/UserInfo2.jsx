@@ -84,17 +84,17 @@ const UserInfo2 = () => {
     },
   ];
   return (
-    <div className="mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden p-7  w-full">
+    <div className="mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden p-7 w-full capitalize">
       <div>
-        {userinfo2.map(({ icon, icon_name, type_name, is_icon }, i) => (
+        {userinfo2.map(({ icon, icon_name, type_name,}, i) => (
           <div className="w-full flex items-center justify-between py-3 border-b border-b-light-gray">
             <div className="flex items-center w-3/5">
               <div className="bg-light-brown/40 rounded-full w-12 h-12 text-brown mr-2 flex items-center justify-center">
                 {icon}
               </div>
-              <div className="text-lg font-medium capitalize">{icon_name}</div>
+              <div className="text-lg font-medium">{icon_name}</div>
             </div>
-            <div className="font-normal capitalize text-gray-600 w-2/5 text-wrap">
+            <div className="font-normal text-gray-600 w-2/5 text-wrap">
               <p>{type_name}</p>
             </div>
           </div>

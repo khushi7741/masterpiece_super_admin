@@ -15,11 +15,11 @@ const Productmapping = () => {
             map product detailing
           </p>
           <div className="flex">
-            <Link to="" className="text-brown text-base capitalize font-medium">
+            <Link to="" className="text-brown capitalize font-medium">
               dashboard
             </Link>
             <IconChevronRight className="w-5 h-6 text-dark-gray mx-2" />
-            <Link to="" className="capitalize text-base text-brown font-medium">
+            <Link to="" className="capitalize text-brown font-medium">
               map product detailing
             </Link>
           </div>
@@ -27,13 +27,13 @@ const Productmapping = () => {
         <div className="flex items-end">
           <div className="flex rounded-lg border border-gray-500 items-center px-3 py-1.5 mr-4">
             <IconX className="h-5 w-5 mr-1 text-gray-500" />
-            <p className="capitalize text-base font-semibold text-gray-500">
+            <p className="capitalize font-semibold text-gray-500">
               cancel
             </p>
           </div>
           <div className="flex rounded-lg border border-light-gray items-center px-3 py-0.5 mr-2 bg-brown">
             <IconDeviceFloppy className="h-5 w-5 mr-1 text-white" />
-            <p className="capitalize text-base font-semibold text-white py-1">
+            <p className="capitalize font-semibold text-white py-1">
               save changes
             </p>
           </div>

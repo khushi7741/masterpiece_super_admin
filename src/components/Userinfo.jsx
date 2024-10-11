@@ -43,7 +43,7 @@ const Userinfo = () => {
     },
   ];
   return (
-    <div className="mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden p-7  w-full">
+    <div className="mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden p-7 w-full capitalize">
       <div className="mb-7">
         <img
           src="/images/Background.png"
@@ -52,13 +52,13 @@ const Userinfo = () => {
         />
       </div>
       <div className="flex justify-center mb-2">
-        <p className="text-xl font-medium capitalize mr-2">deven patel</p>
-        <p className="bg-pista rounded-xl text-sm flex items-center px-2 font-semibold">
+        <p className="text-xl font-medium mr-2">deven patel</p>
+        <p className="bg-pista rounded-xl text-sm flex items-center px-2">
           premium
         </p>
       </div>
       <div className="flex justify-center border-b border-b-brown">
-        <p className="text-xl text-brown capitalize font-semibold mb-6">
+        <p className="text-xl text-brown mb-6">
           seller iD : 230012
         </p>
       </div>
@@ -70,10 +70,10 @@ const Userinfo = () => {
                 {icon}
               </div>
               <div className="block w-full">
-                <div className="text-lg text-gray-500 font-medium capitalize">
+                <div className="text-lg text-gray-500 font-medium">
                   {icon_name}
                 </div>
-                <div className="font-medium capitalize">{type_name}</div>
+                <div className="font-medium">{type_name}</div>
               </div>
             </div>
           </div>

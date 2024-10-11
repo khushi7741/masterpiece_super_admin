@@ -47,78 +47,82 @@ const Sellerbillingdetails = () => {
     },
   ];
   return (
-    <div className="px-7 py-20 w-full h-full min-h-screen">
+    <div className="px-7 py-20 w-full h-full min-h-screen capitalize font-semibold">
       <div className="bg-white rounded-2xl p-7">
         <SellerListFirst />
         <Search />
-        <div className="border border-light-gray rounded-lg overflow-x-auto mb-14">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-gray-100 text-black/70 text-lg capitalize text-left">
-                <th className="px-3 py-3 w-2.5">
-                  <input type="checkbox" name="checkbox" id="checkbox" />
-                </th>
-                <th className="py-3 px-2 text-nowrap w-1/6">payment date</th>
-                <th className="py-3 px-2 text-nowra w-1/6">payment for</th>
-                <th className="py-3 px-2 text-nowrap w-1/6">payment value</th>
-                <th className="py-3 px-2 text-nowrap w-1/6">payment mode</th>
-                <th className="py-3 px-2 text-nowrap w-1/6">payment status</th>
-                <th className="py-3 px-2 text-nowrap w-1/6">renewal date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Sellerbillingdetails.map(
-                (
-                  {
-                    payment_date,
-                    payment_for,
-                    payment_value,
-                    payment_mode,
-                    payment_status,
-                    renewal_date,
-                  },
-                  i
-                ) => (
-                  <tr className="border-b border-b-light-gray">
-                    <td className="px-3 w-2.5">
-                      <input type="checkbox" name="checkbox" id="checkbox" />
-                    </td>
-                    <td className="py-3 px-2 text-nowrap w-1/6 text-black/90 capitalize font-semibold">
-                      {payment_date}
-                    </td>
-                    <td className="py-3 px-2 text-nowrap w-1/6 text-gray-400 capitalize font-semibold">
-                      {payment_for}
-                    </td>
-                    <td className="py-3 px-2 text-nowrap w-1/6 text-gray-400 capitalize font-semibold">
-                      {payment_value}
-                    </td>
-                    <td className="py-3 px-2 text-nowrap w-1/6 text-gray-400 capitalize font-semibold">
-                      {payment_mode}
-                    </td>
-                    <td className="py-3 px-2 text-nowrap w-1/6">
-                      <div
-                        className={`${
-                          payment_status === "in process" &&
-                          "text-gray-500 bg-gray-100 w-20 border rounded-xl text-center text-sm font-semibold"
-                        } ${
-                          payment_status === "completed" &&
-                          "text-green-700 bg-green-100 w-20 border rounded-xl text-center text-sm font-semibold"
-                        } ${
-                          payment_status === "failed" &&
-                          "text-orange-700 bg-orange-100 border rounded-xl text-center w-14 text-sm font-semibold"
-                        }`}
-                      >
-                        {payment_status}
-                      </div>
-                    </td>
-                    <td className="py-3 px-2 text-nowrap w-1/6 text-gray-400 capitalize font-semibold">
-                      {renewal_date}
-                    </td>
-                  </tr>
-                )
-              )}
-            </tbody>
-          </table>
+        <div className="border border-light-gray rounded-lg mb-14">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
+                  <th className="px-3 py-3 w-2.5">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                  </th>
+                  <th className="py-3 px-2 w-1/6">payment date</th>
+                  <th className="py-3 px-2 w-1/6">payment for</th>
+                  <th className="py-3 px-2 w-1/6">payment value</th>
+                  <th className="py-3 px-2 w-1/6">payment mode</th>
+                  <th className="py-3 px-2 w-1/6">
+                    payment status
+                  </th>
+                  <th className="py-3 px-2 w-1/6">renewal date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Sellerbillingdetails.map(
+                  (
+                    {
+                      payment_date,
+                      payment_for,
+                      payment_value,
+                      payment_mode,
+                      payment_status,
+                      renewal_date,
+                    },
+                    i
+                  ) => (
+                    <tr className="border-b border-b-light-gray text-nowrap text-gray-400">
+                      <td className="px-3 w-2.5">
+                        <input type="checkbox" name="checkbox" id="checkbox" />
+                      </td>
+                      <td className="py-3 px-2 w-1/6 text-black/90">
+                        {payment_date}
+                      </td>
+                      <td className="py-3 px-2 w-1/6">
+                        {payment_for}
+                      </td>
+                      <td className="py-3 px-2 w-1/6">
+                        {payment_value}
+                      </td>
+                      <td className="py-3 px-2 w-1/6">
+                        {payment_mode}
+                      </td>
+                      <td className="py-3 px-2 w-1/6 text-center text-sm">
+                        <div
+                          className={`${
+                            payment_status === "in process" &&
+                            "text-gray-500 bg-gray-100 w-20 border rounded-xl"
+                          } ${
+                            payment_status === "completed" &&
+                            "text-green-700 bg-green-100 w-20 border rounded-xl"
+                          } ${
+                            payment_status === "failed" &&
+                            "text-orange-700 bg-orange-100 w-20 border rounded-xl"
+                          }`}
+                        >
+                          {payment_status}
+                        </div>
+                      </td>
+                      <td className="py-3 px-2 w-1/6">
+                        {renewal_date}
+                      </td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
+          </div>
           <Pagination5 />
         </div>
       </div>

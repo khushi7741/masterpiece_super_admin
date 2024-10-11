@@ -16,13 +16,13 @@ const StoreInfo = () => {
         },
     ];
   return (
-    <div className="mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden p-8">
-      <div className="mb-6 capitalize font-semibold text-xl">store info</div>
+    <div className="mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden p-8 capitalize text-lg">
+      <div className="mb-6 font-semibold text-xl">store info</div>
       <form>
         <div className="w-full flex mb-6">
           <div className="w-1/2 pr-8">
             <div className="mb-2 space-y-2">
-              <label htmlFor="storename" className="capitalize text-lg">
+              <label htmlFor="storename" className="">
                 store name
               </label>
               <input
@@ -34,7 +34,7 @@ const StoreInfo = () => {
               />
             </div>
             <div className="mb-2 space-y-2">
-              <label htmlFor="businesstype" className="capitalize text-lg">
+              <label htmlFor="businesstype" className="">
                 business type
               </label>
               <input
@@ -46,7 +46,7 @@ const StoreInfo = () => {
               />
             </div>
             <div className="mb-2 space-y-2">
-              <label htmlFor="address" className="capitalize text-lg">
+              <label htmlFor="address" className="">
                 address
               </label>
               <input
@@ -58,7 +58,7 @@ const StoreInfo = () => {
               />
             </div>
             <div className="mb-2 space-y-2">
-              <label htmlFor="city/Town" className="capitalize text-lg">
+              <label htmlFor="city/Town" className="">
                 city/Town
               </label>
               <input
@@ -72,7 +72,7 @@ const StoreInfo = () => {
           </div>
           <div className="w-1/2 pl-8">
             <div className="mb-2 space-y-2">
-              <label htmlFor="storetype" className="capitalize text-lg">
+              <label htmlFor="storetype" className="">
                 store type
               </label>
               <input
@@ -84,7 +84,7 @@ const StoreInfo = () => {
               />
             </div>
             <div className="mb-2 space-y-2">
-              <label htmlFor="legalentityname" className="capitalize text-lg">
+              <label htmlFor="legalentityname" className="">
                 legal entity name
               </label>
               <input
@@ -96,7 +96,7 @@ const StoreInfo = () => {
               />
             </div>
             <div className="mb-2 space-y-2">
-              <label htmlFor="pincode" className="capitalize text-lg">
+              <label htmlFor="pincode" className="">
                 pincode
               </label>
               <input
@@ -111,7 +111,7 @@ const StoreInfo = () => {
         </div>
       </form>
       <div className="block w-full">
-        <div className="text-lg font-semibold mb-4">Team members</div>
+        <div className="font-semibold mb-4">Team members</div>
         <div className="flex">
             {teammember.map(({
                 img,

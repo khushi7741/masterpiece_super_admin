@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Customerlist = () => {
   let customerdetail = [
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -24,7 +24,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -37,7 +37,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -50,7 +50,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -63,7 +63,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -76,7 +76,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -89,7 +89,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -102,7 +102,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -115,7 +115,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -128,7 +128,7 @@ const Customerlist = () => {
       joined: "29 dec 2024",
     },
     {
-      img: "/images/sellers/1.jpg",
+      img: "/images/Admin/sellers/1.jpg",
       customer_name: "jini patel",
       customer_id: 302012,
       customer_details: "+91-7634009810 jinipatel01@gmail.com",
@@ -142,30 +142,30 @@ const Customerlist = () => {
     },
   ];
   return (
-    <div className="px-7 py-20 w-full h-full min-h-screen">
+    <div className="px-7 py-20 w-full h-full min-h-screen capitalize font-semibold">
       <div className="bg-white rounded-2xl p-7">
         <div className="flex mb-6 justify-between">
           <div className="block">
-            <p className="capitalize text-2xl font-bold text-black/70 mb-2">
+            <p className="text-2xl font-bold text-black/70 mb-2">
               customer list
             </p>
             <div className="flex">
-              <Link to="" className="text-brown text-base capitalize">
+              <Link to="" className="text-brown">
                 dashboard
               </Link>
               <IconChevronRight className="w-5 h-6 text-dark-gray mx-2" />
               <Link
                 to=""
-                className="capitalize text-base text-dark-gray font-semibold"
+                className="text-dark-gray"
               >
                 customer list
               </Link>
             </div>
           </div>
-          <div className="flex items-end">
+          <div className="flex items-end text-gray-500">
             <div className="bg-brown/20 flex p-1.5 rounded-lg">
-              <IconFileExport className="h-7 w-6 mr-1 text-gray-500" />
-              <p className="capitalize text-lg font-semibold text-gray-500">
+              <IconFileExport className="h-7 w-6 mr-1" />
+              <p className="text-lg">
                 export
               </p>
             </div>
@@ -176,22 +176,22 @@ const Customerlist = () => {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-gray-100 text-black/70 text-lg capitalize text-left">
+                <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
                   <th className="px-3 py-3 w-2.5">
                     <input type="checkbox" name="checkbox" id="checkbox" />
                   </th>
-                  <th className="py-3 px-2 w-36 text-nowrap">customer name</th>
-                  <th className="py-3 px-2 w-24 text-nowrap">customer id</th>
-                  <th className="py-3 px-2 w-52">customer details</th>
-                  <th className="py-3 px-2 w-56 text-nowrap">
+                  <th className="py-3 px-2 w-36">customer name</th>
+                  <th className="py-3 px-2 w-24">customer id</th>
+                  <th className="py-3 px-2 w-52 !text-wrap">customer details</th>
+                  <th className="py-3 px-2 w-56">
                     customer address
                   </th>
-                  <th className="py-3 px-2 w-24 text-nowrap">refferals</th>
-                  <th className="py-3 px-2 w-32 text-nowrap">preferred</th>
-                  <th className="py-3 px-2 w-24 text-nowrap">orders</th>
-                  <th className="py-3 px-2 w-24 text-nowrap">reviews</th>
-                  <th className="py-3 px-2 w-40 text-nowrap">status</th>
-                  <th className="py-3 px-2 w-28 text-nowrap">joined</th>
+                  <th className="py-3 px-2 w-24">refferals</th>
+                  <th className="py-3 px-2 w-32">preferred</th>
+                  <th className="py-3 px-2 w-24">orders</th>
+                  <th className="py-3 px-2 w-24">reviews</th>
+                  <th className="py-3 px-2 w-40">status</th>
+                  <th className="py-3 px-2 w-28">joined</th>
                   <th className="py-3 px-2">action</th>
                 </tr>
               </thead>
@@ -214,40 +214,40 @@ const Customerlist = () => {
                     },
                     i
                   ) => (
-                    <tr className="border-b border-b-light-gray">
+                    <tr className="border-b border-b-light-gray text-nowrap text-gray-500">
                       <td className="px-3 w-2.5">
                         <input type="checkbox" name="checkbox" id="checkbox" />
                       </td>
-                      <td className="flex items-center capitalize font-semibold py-3 px-2 w-36 text-nowrap">
+                      <td className="flex items-center py-3 px-2 w-36">
                         <img
                           src={img}
-                          alt=""
+                          alt="girl"
                           className="h-12 w-12 border rounded-xl mr-2"
                         />
                         {customer_name}
                       </td>
-                      <td className="text-brown font-semibold py-3 px-2 w-24 text-nowrap">
+                      <td className="text-brown py-3 px-2 w-24">
                         {customer_id}
                       </td>
-                      <td className="py-3 px-4 text-gray-500 font-semibold w-52">
+                      <td className="py-3 px-4 w-52 !text-wrap">
                         {customer_details}
                       </td>
-                      <td className="py-3 px-2 text-gray-500 font-semibold w-56">
+                      <td className="py-3 px-2 w-56 !text-wrap">
                         {customer_address}
                       </td>
-                      <td className="py-3 px-2 text-gray-500 font-semibold w-24 text-nowrap text-center">
+                      <td className="py-3 px-2 w-24 text-center">
                         {refferals}
                       </td>
-                      <td className="py-3 px-2 text-gray-500 font-semibold w-32 text-nowrap text-center capitalize">
+                      <td className="py-3 px-2 w-32 text-center">
                         {preferred}
                       </td>
-                      <td className="py-3 px-2 text-gray-500 font-semibold w-24 text-nowrap text-center">
+                      <td className="py-3 px-2 w-24 text-center">
                         {orders}
                       </td>
-                      <td className="py-3 px-2 text-gray-500 font-semibold w-24 text-nowrap text-center">
+                      <td className="py-3 px-2 w-24 text-center">
                         {reviews}
                       </td>
-                      <td className="py-3 px-2 capitalize font-semibold w-40 text-nowrap">
+                      <td className="py-3 px-2 w-40">
                         <div
                           className={`${
                             status === "deactivated" &&
@@ -263,11 +263,11 @@ const Customerlist = () => {
                           {status}
                         </div>
                       </td>
-                      <td className="py-3 px-2 text-gray-500 font-semibold w-40 text-nowrap capitalize">
+                      <td className="py-3 px-2 w-40">
                         {joined}
                       </td>
                       <td className="py-3 px-2">
-                        <IconDotsVertical className="h-8 w-8 text-gray-500" />
+                        <IconDotsVertical className="h-6 w-6" />
                       </td>
                     </tr>
                   )

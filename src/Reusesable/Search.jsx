@@ -9,7 +9,7 @@ const Search = () => {
           <input
             type="text"
             placeholder="Search anything. . . ."
-            className="rounded-md placeholder:text-gray-400 outline-none text-dark-gray pl-10 pr-20 py-1.5"
+            className="rounded-md placeholder:text-gray-400 outline-none text-dark-gray pl-10 pr-20 py-1.5 placeholder:font-normal"
           />
           <IconSearch className="h-6 w-6 text-dark-gray absolute top-1.5 left-2" />
         </div>

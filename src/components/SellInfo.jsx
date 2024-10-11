@@ -52,7 +52,7 @@ const SellInfo = () => {
   return (
     <div className="w-full">
       <Timefilter />
-      <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto flex flex-wrap gap-9 w-full">
+      <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto flex flex-wrap gap-9 w-full capitalize font-semibold">
         {box.map(({ icon, boxname, percentage, back }, i) => (
           <div className="mb-4 flex w-56">
             <div className="bg-white shadow-md rounded-3xl w-full">
@@ -64,16 +64,16 @@ const SellInfo = () => {
                     </div>
                   </div>
                   <div className="block w-full">
-                    <div className="capitalize text-base text-dark-gray font-semibold mb-1 text-nowrap">
+                    <div className="text-dark-gray mb-1 text-nowrap">
                       {boxname}
                     </div>
-                    <div className="text-2xl text-blue font-semibold mb-1">
+                    <div className="text-2xl text-blue mb-1">
                       {percentage}
                     </div>
                     <div
                       className={`${
                         back === "0%" &&
-                        "text-gray-500 bg-gray-100 w-8 border rounded-xl text-center text-sm font-semibold"
+                        "text-gray-500 bg-gray-100 w-8 border rounded-xl text-center text-sm"
                       }`}
                     >
                       {back}
