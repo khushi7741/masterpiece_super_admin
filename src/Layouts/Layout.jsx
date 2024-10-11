@@ -6,7 +6,6 @@ import {
   IconEdit,
   IconFilePencil,
   IconInputSearch,
-  IconLayoutGrid,
   IconLogout,
   IconMenu2,
   IconReportMoney,
@@ -18,6 +17,29 @@ import {
 } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import Svgdashboard from "../Svg/Svgdashboard";
+import Svguser from "../Svg/Svguser";
+import Svgcustomer from "../Svg/Svgcustomer";
+import Svgfeedback from "../Svg/Svgfeedback";
+import Svgproduct from "../Svg/Svgproduct";
+import Svgcontent from "../Svg/Svgcontent";
+import Svgblogs from "../Svg/Svgblogs";
+import Svgtag from "../Svg/Svgtag";
+import { Svgsales } from "../Svg/Svgsales";
+import Svgplan from "../Svg/Svgplan";
+import Svgads from "../Svg/Svgads";
+import Svglogout from "../Svg/Svglogout";
+import Svgcustomerreview from "../Svg/Svgcustomerreview";
+import Svgportalfeedback from "../Svg/Svgportalfeedback";
+import Svgpagecontent from "../Svg/Svgpagecontent";
+import Svgposition from "../Svg/Svgposition";
+import Svgprofile from "../Svg/Svgprofile";
+import Svgproductlist from "../Svg/Svgproductlist";
+import Svgproductmapping from "../Svg/Svgproductmapping";
+import Svgcut from "../Svg/Svgcut";
+import Svgoutfits from "../Svg/Svgoutfits";
+import Svgfabric from "../Svg/Svgfabric";
+import Svgratecard from "../Svg/Svgratecard";
 
 const Layout = ({ children }) => {
   return (
@@ -39,11 +61,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="bg-white mx-4 rounded-lg py-2 pl-3 flex items-center"
+                  className="bg-white mx-4 rounded-lg py-2 pl-3 flex items-center gap-2"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconLayoutGrid className="h-6 w-6 mr-2" />
-                  </div>
+                  <Svgdashboard />
                   <span className="text-black lg:inline hidden text-xl capitalize font-semibold">
                     dashboard
                   </span>
@@ -52,11 +72,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-3"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconUserFilled className="h-6 w-6 mr-2" />
-                  </div>
+                    <Svguser />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     sellers
                   </span>
@@ -65,11 +83,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-3"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconUsersGroup className="h-6 w-6 mr-2" />
-                  </div>
+                  <Svgcustomer />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     customers
                   </span>
@@ -80,10 +96,8 @@ const Layout = ({ children }) => {
                   to=""
                   className="text-white text-sm py-2.5 px-6 flex items-center justify-between"
                 >
-                  <div className="flex">
-                    <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                      <IconEdit className="h-6 w-6 mr-2" />
-                    </div>
+                  <div className="flex text-nowrap items-center gap-2">
+                    <Svgfeedback />
                     <span className="text-white lg:inline hidden text-xl capitalize">
                       feedback & review
                     </span>
@@ -96,11 +110,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                      <Svgcustomerreview />
                       <span className="text-white font-semibold text-lg capitalize">
                         customer review
                       </span>
@@ -109,11 +121,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                     <Svgportalfeedback />
                       <span className="text-white font-semibold text-lg capitalize">
                         portal feedback
                       </span>
@@ -126,10 +136,8 @@ const Layout = ({ children }) => {
                   to=""
                   className="text-white text-sm py-2.5 px-6 flex items-center justify-between"
                 >
-                  <div className="flex">
-                    <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                      <IconClipboardText className="h-6 w-6 mr-2" />
-                    </div>
+                  <div className="flex text-nowrap items-center gap-2">
+                    <Svgproduct />
                     <span className="text-white lg:inline hidden text-xl capitalize">
                       product manager
                     </span>
@@ -142,11 +150,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                      <Svgproductlist />
                       <span className="text-white font-semibold text-lg capitalize">
                         producy list
                       </span>
@@ -155,11 +161,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                      <Svgproductmapping />
                       <span className="text-white font-semibold text-lg capitalize">
                         product mapping
                       </span>
@@ -168,11 +172,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                      <Svgcut />
                       <span className="text-white font-semibold text-lg capitalize">
                         cuts
                       </span>
@@ -181,11 +183,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                      <Svgoutfits />
                       <span className="text-white font-semibold text-lg capitalize">
                         outfits details
                       </span>
@@ -194,11 +194,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                     <Svgfabric />
                       <span className="text-white font-semibold text-lg capitalize">
                         fabric estimator
                       </span>
@@ -207,11 +205,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                     <Svgratecard />
                       <span className="text-white font-semibold text-lg capitalize">
                         rate card
                       </span>
@@ -224,10 +220,8 @@ const Layout = ({ children }) => {
                   to=""
                   className="text-white text-sm py-2.5 px-6 flex items-center justify-between"
                 >
-                  <div className="flex">
-                    <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                      <IconAddressBook className="h-6 w-6 mr-2" />
-                    </div>
+                  <div className="flex gap-2 items-center">
+                    <Svgcontent />
                     <span className="text-white lg:inline hidden text-xl capitalize">
                       content manager
                     </span>
@@ -240,11 +234,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                     <Svgpagecontent />
                       <span className="text-white font-semibold text-lg capitalize">
                         page content
                       </span>
@@ -253,11 +245,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                      <Svgposition />
                       <span className="text-white font-semibold text-lg capitalize">
                         position manager
                       </span>
@@ -266,11 +256,9 @@ const Layout = ({ children }) => {
                   <li className="">
                     <Link
                       to=""
-                      className="text-white text-sm py-2.5 px-6 flex items-center"
+                      className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                     >
-                      <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                        <IconEdit className="h-6 w-6 mr-2" />
-                      </div>
+                      <Svgprofile />
                       <span className="text-white font-semibold text-lg capitalize">
                         profile pinning
                       </span>
@@ -281,11 +269,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconFilePencil className="h-6 w-6 mr-2" />
-                  </div>
+                  <Svgblogs />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     blogs overview
                   </span>
@@ -294,11 +280,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconInputSearch className="h-6 w-6 mr-2" />
-                  </div>
+                 <Svgtag />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     tag manager
                   </span>
@@ -307,11 +291,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconReportMoney className="h-6 w-6 mr-2" />
-                  </div>
+                  <Svgsales />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     sales report
                   </span>
@@ -320,11 +302,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconTimelineEventFilled className="h-6 w-6 mr-2" />
-                  </div>
+                  <Svgplan />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     plan manager
                   </span>
@@ -333,11 +313,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconSpeakerphone className="h-6 w-6 mr-2" />
-                  </div>
+                 <Svgads />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     aDS manager
                   </span>
@@ -346,11 +324,9 @@ const Layout = ({ children }) => {
               <li className="flex flex-col">
                 <Link
                   to=""
-                  className="text-white text-sm py-2.5 px-6 flex items-center"
+                  className="text-white text-sm py-2.5 px-6 flex items-center gap-2"
                 >
-                  <div className="block items-center align-middle h-auto w-auto text-center leading-4 rounded-sm">
-                    <IconLogout className="h-6 w-6 mr-2" />
-                  </div>
+                  <Svglogout />
                   <span className="text-white lg:inline hidden text-xl capitalize">
                     logout
                   </span>

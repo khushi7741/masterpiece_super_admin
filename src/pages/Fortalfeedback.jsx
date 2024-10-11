@@ -334,7 +334,7 @@ const Fortalfeedback = () => {
                   },
                   i
                 ) => (
-                  <tr className="border-b border-b-light-gray">
+                  <tr key={i} className="border-b border-b-light-gray">
                     <td className="px-3 w-2.5">
                       <input type="checkbox" name="checkbox" id="checkbox" />
                     </td>
