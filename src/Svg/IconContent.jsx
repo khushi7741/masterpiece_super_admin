@@ -1,10 +1,10 @@
 import React from "react";
 
-const Svgcontent = () => {
+export const IconContent = ({ size = 19 }) => {
   return (
     <svg
-      width="21"
-      height="21"
+      width={size}
+      height={size}
       viewBox="0 0 21 21"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ const Svgcontent = () => {
   );
 };
 
-export default Svgcontent;
+export default IconContent;

@@ -1,10 +1,10 @@
 import React from "react";
 
-const Svgcustomerreview = () => {
+const Svgcustomerreview = ({ size = 19 }) => {
   return (
     <svg
-      width="23"
-      height="24"
+    width={size}
+    height={size}
       viewBox="0 0 23 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
