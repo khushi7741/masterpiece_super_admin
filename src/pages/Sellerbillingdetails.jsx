@@ -52,7 +52,7 @@ const Sellerbillingdetails = () => {
         <SellerListFirst />
         <Search />
         <div className="border border-light-gray rounded-lg mb-14">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-x-custom">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">

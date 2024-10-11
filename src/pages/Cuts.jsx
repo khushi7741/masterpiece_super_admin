@@ -10,6 +10,8 @@ import Search from "../Reusesable/Search";
 import Pagination5 from "../Reusesable/Pagination5";
 
 const Cuts = () => {
+  const HandleAddCut = () => {};
+  const HandleExport = () => {};
   let cut = [
     {
       img: "/images/Admin/products/girl.png",
@@ -91,39 +93,33 @@ const Cuts = () => {
               list of cuts
             </p>
             <div className="flex">
-              <Link
-                to=""
-                className="text-brown font-medium"
-              >
+              <Link to="" className="text-brown font-medium">
                 dashboard
               </Link>
               <IconChevronRight className="w-5 h-6 text-dark-gray mx-2" />
-              <Link
-                to=""
-                className="text-dark-gray font-medium"
-              >
+              <Link to="" className="text-dark-gray font-medium">
                 list of cuts
               </Link>
             </div>
           </div>
           <div className="flex items-end">
-            <div className="flex rounded-lg bg-brown/20 items-center px-3 py-1.5 mr-4">
-              <IconFileExport className="h-5 w-5 mr-1 text-gray-500" />
-              <p className="text-gray-500">
-                export
-              </p>
-            </div>
-            <div className="flex rounded-lg border border-light-gray items-center px-3 py-0.5 mr-2 bg-brown">
-              <IconPlus className="h-5 w-5 mr-1 text-white" />
-              <p className="text-white py-1">
-                Add cuts
-              </p>
-            </div>
+            <button
+              onClick={HandleExport}
+              className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"
+            >
+              <IconFileExport className="h-7 w-6 mr-1" /> export
+            </button>
+            <button
+              onClick={HandleAddCut}
+              className="rounded-lg border border-light-gray items-center px-3 py-1.5 mr-2 bg-brown text-white"
+            >
+              + Add cuts
+            </button>
           </div>
         </div>
         <Search />
         <div className="border border-light-gray rounded-lg mb-14">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-x-custom">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
@@ -159,9 +155,7 @@ const Cuts = () => {
                       <td className="py-3 px-4 text-gray-500 w-52">
                         {position}
                       </td>
-                      <td className="py-3 px-2 text-gray-500 w-56">
-                        {added}
-                      </td>
+                      <td className="py-3 px-2 text-gray-500 w-56">{added}</td>
                       <td className="py-3 px-2 flex justify-center items-center">
                         <IconDotsVertical className="h-6 w-6 text-gray-500" />
                       </td>

@@ -5,6 +5,7 @@ import React from "react";
 import Pagination3 from "../Reusesable/Pagination3";
 
 const Contact = () => {
+  const HandleExport = () => {};
     let contact = [
         {
             date: "29 dec 2023",
@@ -33,12 +34,9 @@ const Contact = () => {
         <p className="capitalize text-2xl font-bold text-black/70 mr-4">
           contact inquiries
         </p>
-        <div className="bg-brown/20 flex p-1.5 rounded-lg text-gray-500">
-          <IconFileExport className="h-7 w-6 mr-1" />
-          <p className="capitalize text-lg font-semibold">
-            export
-          </p>
-        </div>
+        <div className="flex items-end text-gray-500">
+          <button onClick={HandleExport} className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"><IconFileExport className="h-7 w-6 mr-1" /> export</button>
+          </div>
       </div>
       <table className="w-full">
         <thead>

@@ -10,6 +10,8 @@ import Search from "../Reusesable/Search";
 import { Link } from "react-router-dom";
 
 const Fabric = () => {
+  const HandleAddCut = () => {};
+  const HandleExport = () => {};
   let fabric = [
     {
       img: "/images/Admin/products/choli.png",
@@ -131,23 +133,20 @@ const Fabric = () => {
             </div>
           </div>
           <div className="flex items-end">
-            <div className="flex rounded-lg bg-brown/20 items-center px-3 py-1.5 mr-4">
-              <IconFileExport className="h-5 w-5 mr-1 text-gray-500" />
-              <p className="text-gray-500">
-                export
-              </p>
-            </div>
-            <div className="flex rounded-lg border border-light-gray items-center px-3 py-0.5 mr-2 bg-brown">
-              <IconPlus className="h-5 w-5 mr-1 text-white" />
-              <p className="text-white py-1">
-                Add cuts
-              </p>
-            </div>
+          <div className="flex items-end text-gray-500">
+          <button onClick={HandleExport} className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"><IconFileExport className="h-7 w-6 mr-1" /> export</button>
+          </div>
+            <button
+              onClick={HandleAddCut}
+              className="rounded-lg border border-light-gray items-center px-3 py-1.5 mr-2 bg-brown text-white"
+            >
+              + Add cuts
+            </button>
           </div>
         </div>
         <Search />
         <div className="border border-light-gray rounded-lg mb-14">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-x-custom">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">

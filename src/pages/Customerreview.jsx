@@ -14,6 +14,8 @@ import {
 import Pagination5 from "../Reusesable/Pagination5";
 
 const Customerreview = () => {
+  const HandleExport = () => {};
+  const HandleFilters = () => {};
   let feedback = [
     {
       date: "1 min ago",
@@ -130,28 +132,16 @@ const Customerreview = () => {
               >
                 all
               </Link>
-              <Link
-                to=""
-                className="px-2"
-              >
+              <Link to="" className="px-2">
                 tailor
               </Link>
-              <Link
-                to=""
-                className="px-2"
-              >
+              <Link to="" className="px-2">
                 boutique
               </Link>
-              <Link
-                to=""
-                className="px-2 pr-2"
-              >
+              <Link to="" className="px-2 pr-2">
                 designer
               </Link>
-              <Link
-                to=""
-                className="px-2"
-              >
+              <Link to="" className="px-2">
                 artisan
               </Link>
             </div>
@@ -172,9 +162,7 @@ const Customerreview = () => {
                   </p>
                   <p className="text-3xl text-blue mb-3">200k</p>
                   <div className="w-16 bg-green-200/50  border rounded-2xl py-1">
-                    <p className="text-green-700 font-bold text-center">
-                      +10%
-                    </p>
+                    <p className="text-green-700 font-bold text-center">+10%</p>
                   </div>
                 </div>
               </div>
@@ -210,12 +198,12 @@ const Customerreview = () => {
             reviews manager
           </p>
           <div className="flex items-end text-gray-500">
-            <div className="bg-brown/20 flex p-1.5 rounded-lg">
-              <IconFileExport className="h-7 w-6 mr-1 text-gray-500" />
-              <p className="text-lg text-gray-500">
-                export
-              </p>
-            </div>
+            <button
+              onClick={HandleExport}
+              className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"
+            >
+              <IconFileExport className="h-7 w-6 mr-1" /> export
+            </button>
           </div>
         </div>
         <div className="flex justify-between mb-6">
@@ -230,53 +218,33 @@ const Customerreview = () => {
           <div className="flex text-gray-500">
             <div className="flex border border-light-gray rounded-md items-center mr-4">
               <IconCalendar className="h-6 w-6 ml-2" />
-              <p className="px-2 font-medium">
-                selected dates
-              </p>
+              <p className="px-2 font-medium">selected dates</p>
             </div>
-            <div className="flex border border-light-gray rounded-md items-center">
-              <IconAdjustmentsHorizontal className="h-6 w-6 ml-2" />
-              <p className="px-2 font-medium">
-                filters
-              </p>
-            </div>
+            <button
+              onClick={HandleFilters}
+              className="flex border border-light-gray rounded-md items-center p-1.5 font-medium px-2 text-gray-500"
+            >
+              <IconAdjustmentsHorizontal className="h-6 w-6 mr-2" /> filters
+            </button>
           </div>
         </div>
         <div className="border border-light-gray rounded-lg">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-x-custom">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
                   <th className="px-3 py-3 w-2.5">
                     <input type="checkbox" name="checkbox" id="checkbox" />
                   </th>
-                  <th className="py-3 px-2 w-32">
-                    date
-                  </th>
-                  <th className="py-3 px-2 w-36">
-                    customer id
-                  </th>
-                  <th className="py-3 px-2 w-32">
-                    order id
-                  </th>
-                  <th className="py-3 px-2 w-36">
-                    customer
-                  </th>
-                  <th className="py-3 px-2 w-36">
-                    seller name
-                  </th>
-                  <th className="py-3 px-2 w-32">
-                    ratings
-                  </th>
-                  <th className="py-3 px-2 w-96">
-                    review/report
-                  </th>
-                  <th className="py-3 px-2 w-44">
-                    review status
-                  </th>
-                  <th className="py-3 px-2 w-48">
-                    action
-                  </th>
+                  <th className="py-3 px-2 w-32">date</th>
+                  <th className="py-3 px-2 w-36">customer id</th>
+                  <th className="py-3 px-2 w-32">order id</th>
+                  <th className="py-3 px-2 w-36">customer</th>
+                  <th className="py-3 px-2 w-36">seller name</th>
+                  <th className="py-3 px-2 w-32">ratings</th>
+                  <th className="py-3 px-2 w-96">review/report</th>
+                  <th className="py-3 px-2 w-44">review status</th>
+                  <th className="py-3 px-2 w-48">action</th>
                 </tr>
               </thead>
               <tbody>
@@ -302,21 +270,11 @@ const Customerreview = () => {
                       <td className="px-3 w-2.5">
                         <input type="checkbox" name="checkbox" id="checkbox" />
                       </td>
-                      <td className="py-3 px-2 text-gray-500 w-32">
-                        {date}
-                      </td>
-                      <td className="py-3 px-2 w-36">
-                        {customer_id}
-                      </td>
-                      <td className="py-3 px-2 text-brown w-32">
-                        {order_id}
-                      </td>
-                      <td className="py-3 px-2 w-36">
-                        {customer}
-                      </td>
-                      <td className="py-3 px-2 w-36">
-                        {seller_name}
-                      </td>
+                      <td className="py-3 px-2 text-gray-500 w-32">{date}</td>
+                      <td className="py-3 px-2 w-36">{customer_id}</td>
+                      <td className="py-3 px-2 text-brown w-32">{order_id}</td>
+                      <td className="py-3 px-2 w-36">{customer}</td>
+                      <td className="py-3 px-2 w-36">{seller_name}</td>
                       <td
                         className={`${
                           ratings === 4 &&

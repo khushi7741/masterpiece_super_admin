@@ -33,7 +33,7 @@ const Dashboard = () => {
      <Timefilter />
       <div className="w-full flex xl:flex-row flex-col gap-x-5">
         <div className="xl:w-1/2 w-full ">
-          <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto">
+          <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto scrollbar-x-custom scrollbar-x-custom">
             <p className="font-bold text-2xl text-black/80 capitalize mb-7">
               customer panel
             </p>
@@ -188,7 +188,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="xl:w-1/2 w-full">
-          <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto">
+          <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto scrollbar-x-custom scrollbar-x-custom">
             <div className="flex w-full">
               <p className="font-bold text-2xl text-black/80 capitalize pr-4">
                 seller panel

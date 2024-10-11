@@ -1,8 +1,9 @@
-import {IconChevronRight, IconFileExport} from "@tabler/icons-react";
+import { IconChevronRight, IconFileExport } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const SellerListFirst = () => {
+  const HandleExport = () => {};
   return (
     <div className="">
       <div className="flex mb-6 justify-between">
@@ -23,13 +24,13 @@ const SellerListFirst = () => {
             </Link>
           </div>
         </div>
-        <div className="flex items-end">
-          <div className="bg-brown/20 flex p-1.5 rounded-lg">
-            <IconFileExport className="h-7 w-6 mr-1 text-gray-500" />
-            <p className="capitalize text-lg font-semibold text-gray-500">
-              export
-            </p>
-          </div>
+        <div className="flex items-end text-gray-500">
+          <button
+            onClick={HandleExport}
+            className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"
+          >
+            <IconFileExport className="h-7 w-6 mr-1" /> export
+          </button>
         </div>
       </div>
     </div>

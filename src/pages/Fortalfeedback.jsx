@@ -12,6 +12,8 @@ import {
 import Pagination5 from "../Reusesable/Pagination5";
 
 const Fortalfeedback = () => {
+  const HandleExport = () => {};
+  const HandleFilters = () => {};
   let fortalfeedback = [
     {
       img: "/images/Admin/1.jpg",
@@ -160,28 +162,16 @@ const Fortalfeedback = () => {
               >
                 all
               </Link>
-              <Link
-                to=""
-                className="px-2 "
-              >
+              <Link to="" className="px-2 ">
                 tailor
               </Link>
-              <Link
-                to=""
-                className="px-2"
-              >
+              <Link to="" className="px-2">
                 boutique
               </Link>
-              <Link
-                to=""
-                className="px-2 pr-2"
-              >
+              <Link to="" className="px-2 pr-2">
                 designer
               </Link>
-              <Link
-                to=""
-                className="px-2"
-              >
+              <Link to="" className="px-2">
                 artisan
               </Link>
             </div>
@@ -197,16 +187,10 @@ const Fortalfeedback = () => {
                   </div>
                 </div>
                 <div className="block text-nowrap">
-                  <p className="text-2xl text-dark-gray mb-3">
-                    feedback count
-                  </p>
+                  <p className="text-2xl text-dark-gray mb-3">feedback count</p>
                   <div className="flex items-center">
-                    <p className="text-3xl text-blue mb-3 mr-3">
-                      200k
-                    </p>
-                    <p className="text-xl text-gray-400">
-                      portal feedback
-                    </p>
+                    <p className="text-3xl text-blue mb-3 mr-3">200k</p>
+                    <p className="text-xl text-gray-400">portal feedback</p>
                   </div>
                   <div className="w-16 bg-green-200/50  border rounded-2xl py-1">
                     <p className="text-base text-green-700 font-bold text-center">
@@ -230,12 +214,8 @@ const Fortalfeedback = () => {
                     tailor enquiries
                   </p>
                   <div className="flex items-center">
-                    <p className="text-3xl text-blue mb-3 mr-3">
-                      200k
-                    </p>
-                    <p className="text-xl text-gray-400">
-                      portal feedback
-                    </p>
+                    <p className="text-3xl text-blue mb-3 mr-3">200k</p>
+                    <p className="text-xl text-gray-400">portal feedback</p>
                   </div>
                   <div className="w-16 bg-green-200/50  border rounded-2xl py-1">
                     <p className="text-base text-green-700 font-bold text-center">
@@ -261,12 +241,12 @@ const Fortalfeedback = () => {
             </div>
           </div>
           <div className="flex items-end text-gray-500">
-            <div className="bg-brown/20 flex p-1.5 rounded-lg">
-              <IconFileExport className="h-7 w-6 mr-1" />
-              <p className="text-lg">
-                export
-              </p>
-            </div>
+            <button
+              onClick={HandleExport}
+              className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"
+            >
+              <IconFileExport className="h-7 w-6 mr-1" /> export
+            </button>
           </div>
         </div>
         <div className="flex justify-between mb-6">
@@ -281,129 +261,114 @@ const Fortalfeedback = () => {
           <div className="flex text-gray-500">
             <div className="flex border border-light-gray rounded-md items-center mr-4">
               <IconCalendar className="h-6 w-6 ml-2" />
-              <p className="px-2 font-medium">
-                selected dates
-              </p>
+              <p className="px-2 font-medium">selected dates</p>
             </div>
-            <div className="flex border border-light-gray rounded-md items-center">
-              <IconAdjustmentsHorizontal className="h-6 w-6 ml-2" />
-              <p className="px-2 font-medium">
-                filters
-              </p>
-            </div>
+            <button
+              onClick={HandleFilters}
+              className="flex border border-light-gray rounded-md items-center p-1.5 font-medium px-2 text-gray-500"
+            >
+              <IconAdjustmentsHorizontal className="h-6 w-6 mr-2" /> filters
+            </button>
           </div>
         </div>
         <div className="border border-light-gray rounded-lg">
-          <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
-                <th className="px-3 py-3 w-2.5">
-                  <input type="checkbox" name="checkbox" id="checkbox" />
-                </th>
-                <th className="py-3 px-2">
-                  customer name
-                </th>
-                <th className="py-3 px-2">
-                  customer id
-                </th>
-                <th className="py-3 px-2">
-                  total inquiries
-                </th>
-                <th className="py-3 px-2">ratings</th>
-                <th className="py-3 px-2">attributes</th>
-                <th className="py-3 px-2">
-                  review/suggestion
-                </th>
-                <th className="py-3 px-2">date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {fortalfeedback.map(
-                (
-                  {
-                    img,
-                    customer_name,
-                    customer_id,
-                    total_enquiries,
-                    ratings,
-                    attribute1,
-                    attribute2,
-                    attribute3,
-                    review,
-                    date,
-                  },
-                  i
-                ) => (
-                  <tr key={i} className="border-b border-b-light-gray text-nowrap">
-                    <td className="px-3 w-2.5">
-                      <input type="checkbox" name="checkbox" id="checkbox" />
-                    </td>
-                    <td className="py-3 px-2 text-gray-500 w-44">
-                      <div className="flex items-center">
-                        <img
-                          src={img}
-                          alt="girl"
-                          className="h-12 w-12 border rounded-xl mr-2"
-                        />
-                        {customer_name}
-                      </div>
-                    </td>
-                    <td className="py-3 px-2 text-brown w-40">
-                      {customer_id}
-                    </td>
-                    <td className="py-3 px-2 text-black/80 w-32 text-center">
-                      {total_enquiries}
-                    </td>
-                    <td
-                      className={`font-medium text-center w-32 ${
-                        ratings === 4 &&
-                        "text-green-500 py-3 px-2"
-                      } ${
-                        ratings === 3 &&
-                        "text-yellow-400 py-3 px-2"
-                      } ${
-                        ratings === 2 &&
-                        "text-orange-400 py-3 px-2"
-                      } ${
-                        ratings === 5 &&
-                        "text-green-700 py-3 px-2"
-                      }`}
+          <div className="overflow-x-auto scrollbar-x-custom">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
+                  <th className="px-3 py-3 w-2.5">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                  </th>
+                  <th className="py-3 px-2">customer name</th>
+                  <th className="py-3 px-2">customer id</th>
+                  <th className="py-3 px-2">total inquiries</th>
+                  <th className="py-3 px-2">ratings</th>
+                  <th className="py-3 px-2">attributes</th>
+                  <th className="py-3 px-2">review/suggestion</th>
+                  <th className="py-3 px-2">date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fortalfeedback.map(
+                  (
+                    {
+                      img,
+                      customer_name,
+                      customer_id,
+                      total_enquiries,
+                      ratings,
+                      attribute1,
+                      attribute2,
+                      attribute3,
+                      review,
+                      date,
+                    },
+                    i
+                  ) => (
+                    <tr
+                      key={i}
+                      className="border-b border-b-light-gray text-nowrap"
                     >
-                      {ratings}
-                    </td>
-                    <td className="py-3 px-2 text-black/80 w-60 text-xs">
-                      <div className="flex items-center">
-                        <div className="border border-light-gray rounded-xl p-1 mr-1">
-                          {attribute1}
-                        </div>
-                        <div className="border border-light-gray rounded-xl px-2 py-0.5 mr-1">
-                          {attribute2}
-                        </div>
-                        <div className="text-brown text-sm">{attribute3}</div>
-                      </div>
-                    </td>
-                    <td className="py-3 px-2 text-black/80 text-sm">
-                      <div className="flex items-center">
-                        <div className="flex items-center w-20">
+                      <td className="px-3 w-2.5">
+                        <input type="checkbox" name="checkbox" id="checkbox" />
+                      </td>
+                      <td className="py-3 px-2 text-gray-500 w-44">
+                        <div className="flex items-center">
                           <img
                             src={img}
                             alt="girl"
                             className="h-12 w-12 border rounded-xl mr-2"
                           />
-                          <div className="text-brown">{attribute3}</div>
+                          {customer_name}
                         </div>
-                        <div className="text-gray-500 text-wrap w-96 px-5">{review}</div>
-                      </div>
-                    </td>
-                    <td className="py-3 px-2 text-black/80 w-40">
-                      {date}
-                    </td>
-                  </tr>
-                )
-              )}
-            </tbody>
-          </table>
+                      </td>
+                      <td className="py-3 px-2 text-brown w-40">
+                        {customer_id}
+                      </td>
+                      <td className="py-3 px-2 text-black/80 w-32 text-center">
+                        {total_enquiries}
+                      </td>
+                      <td
+                        className={`font-medium text-center w-32 ${
+                          ratings === 4 && "text-green-500 py-3 px-2"
+                        } ${ratings === 3 && "text-yellow-400 py-3 px-2"} ${
+                          ratings === 2 && "text-orange-400 py-3 px-2"
+                        } ${ratings === 5 && "text-green-700 py-3 px-2"}`}
+                      >
+                        {ratings}
+                      </td>
+                      <td className="py-3 px-2 text-black/80 w-60 text-xs">
+                        <div className="flex items-center">
+                          <div className="border border-light-gray rounded-xl p-1 mr-1">
+                            {attribute1}
+                          </div>
+                          <div className="border border-light-gray rounded-xl px-2 py-0.5 mr-1">
+                            {attribute2}
+                          </div>
+                          <div className="text-brown text-sm">{attribute3}</div>
+                        </div>
+                      </td>
+                      <td className="py-3 px-2 text-black/80 text-sm">
+                        <div className="flex items-center">
+                          <div className="flex items-center w-20">
+                            <img
+                              src={img}
+                              alt="girl"
+                              className="h-12 w-12 border rounded-xl mr-2"
+                            />
+                            <div className="text-brown">{attribute3}</div>
+                          </div>
+                          <div className="text-gray-500 text-wrap w-96 px-5">
+                            {review}
+                          </div>
+                        </div>
+                      </td>
+                      <td className="py-3 px-2 text-black/80 w-40">{date}</td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
           </div>
           <Pagination5 />
         </div>

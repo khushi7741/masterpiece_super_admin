@@ -52,7 +52,7 @@ const SellInfo = () => {
   return (
     <div className="w-full">
       <Timefilter />
-      <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto flex flex-wrap gap-9 w-full capitalize font-semibold">
+      <div className="p-5 mb-7 bg-white rounded-2xl border border-light-gray overflow-hidden overflow-x-auto scrollbar-x-custom flex flex-wrap gap-9 w-full capitalize font-semibold">
         {box.map(({ icon, boxname, percentage, back }, i) => (
           <div className="mb-4 flex w-56">
             <div className="bg-white shadow-md rounded-3xl w-full">

@@ -11,6 +11,8 @@ import Search from "../Reusesable/Search";
 import Pagination5 from "../Reusesable/Pagination5";
 
 const SellerList = () => {
+  const HandleExport = () => {};
+  const HandleFilters = () => {}; 
   let SellerDetail = [
     {
       img: "/images/Admin/sellers/1.jpg",
@@ -181,7 +183,7 @@ const SellerList = () => {
         <SellerListFirst />
         <Search />
         <div className="border border-light-gray rounded-lg mb-14">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-x-custom">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
@@ -230,24 +232,14 @@ const SellerList = () => {
                         />
                         {seller_name}
                       </td>
-                      <td className="text-brown py-3 px-2 w-24">
-                        {seller_id}
-                      </td>
-                      <td className="py-3 px-2 w-28">
-                        {seller_type}
-                      </td>
-                      <td className="py-3 px-2 w-40">
-                        {store_name}
-                      </td>
-                      <td className="py-3 px-2 w-56">
-                        {store_location}
-                      </td>
+                      <td className="text-brown py-3 px-2 w-24">{seller_id}</td>
+                      <td className="py-3 px-2 w-28">{seller_type}</td>
+                      <td className="py-3 px-2 w-40">{store_name}</td>
+                      <td className="py-3 px-2 w-56">{store_location}</td>
                       <td className="py-3 px-2 w-32 text-center">
                         {membership}
                       </td>
-                      <td className="py-3 px-2 w-24 text-center">
-                        {orders}
-                      </td>
+                      <td className="py-3 px-2 w-24 text-center">{orders}</td>
                       <td className="py-3 px-4 w-52 !text-wrap">
                         {contact_info}
                       </td>
@@ -287,19 +279,12 @@ const SellerList = () => {
               <div className="flex">
                 <div className="flex border border-light-gray rounded-md items-center mr-4">
                   <IconCalendar className="h-6 w-6 ml-2" />
-                  <p className="px-2">
-                    selected dates
-                  </p>
+                  <p className="px-2">selected dates</p>
                 </div>
-                <div className="flex border border-light-gray rounded-md items-center">
-                  <IconAdjustmentsHorizontal className="h-6 w-6 ml-2" />
-                  <p className="px-2">
-                    filters
-                  </p>
-                </div>
+                <button onClick={HandleFilters} className="flex border border-light-gray rounded-md items-center p-1.5 font-medium px-2 text-gray-500"><IconAdjustmentsHorizontal className="h-6 w-6 mr-2" /> filters</button>
               </div>
             </div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto scrollbar-x-custom">
               <table className="w-full border-t border-light-gray">
                 <thead>
                   <tr className="bg-gray-100 text-black/70 text-lg text-left w-full text-nowrap">
@@ -335,15 +320,9 @@ const SellerList = () => {
                         <td className="py-3 px-2 w-1/5 text-brown">
                           {seller_id}
                         </td>
-                        <td className="py-3 px-2 w-1/5">
-                          {seller_type}
-                        </td>
-                        <td className="py-3 px-2 w-1/5">
-                          {seller_name}
-                        </td>
-                        <td className="py-3 px-2 w-1/5">
-                          {orders}
-                        </td>
+                        <td className="py-3 px-2 w-1/5">{seller_type}</td>
+                        <td className="py-3 px-2 w-1/5">{seller_name}</td>
+                        <td className="py-3 px-2 w-1/5">{orders}</td>
                       </tr>
                     )
                   )}
@@ -355,25 +334,18 @@ const SellerList = () => {
           <div className="2xl:w-2/5 w-full border border-light-gray rounded-lg">
             <div className="flex justify-between p-4">
               <div className="block">
-                <p className="text-xl">
-                  sellers by location
-                </p>
-                <p className="text-dark-gray">
-                  sellers registered by location
-                </p>
+                <p className="text-xl">sellers by location</p>
+                <p className="text-dark-gray">sellers registered by location</p>
               </div>
               <div className="flex">
-                <div className="flex border border-light-gray rounded-md items-center mr-3">
-                  <IconAdjustmentsHorizontal className="h-6 w-6 text-gray-500 ml-2" />
-                  <p className="px-2 text-gray-500 font-medium">
-                    filters
-                  </p>
-                </div>
-                <div className="bg-brown/20 flex p-2 rounded-lg">
-                  <IconFileExport className="h-7 w-6 mr-1 text-gray-500" />
-                  <p className="text-lg text-gray-500">
-                    export
-                  </p>
+              <button onClick={HandleFilters} className="flex border border-light-gray rounded-md items-center p-1.5 font-medium px-2 text-gray-500"><IconAdjustmentsHorizontal className="h-6 w-6 mx-2" /> filters</button>
+                <div className="flex items-end text-gray-500">
+                  <button
+                    onClick={HandleExport}
+                    className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"
+                  >
+                    <IconFileExport className="h-7 w-6 mr-1" /> export
+                  </button>
                 </div>
               </div>
             </div>
@@ -381,9 +353,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    Maharashtra
-                  </p>
+                  <p className="text-black text-lg">Maharashtra</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">678</p>
@@ -395,9 +365,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    Madhya pradesh
-                  </p>
+                  <p className="text-black text-lg">Madhya pradesh</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">500</p>
@@ -409,9 +377,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    karnataka
-                  </p>
+                  <p className="text-black text-lg">karnataka</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">500</p>
@@ -423,9 +389,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    tamil nadu
-                  </p>
+                  <p className="text-black text-lg">tamil nadu</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">456</p>
@@ -437,9 +401,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    delhi
-                  </p>
+                  <p className="text-black text-lg">delhi</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">189</p>
@@ -451,9 +413,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    uttar pradesh
-                  </p>
+                  <p className="text-black text-lg">uttar pradesh</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">700</p>
@@ -465,9 +425,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    rajasthan
-                  </p>
+                  <p className="text-black text-lg">rajasthan</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">700</p>
@@ -479,9 +437,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    punjab
-                  </p>
+                  <p className="text-black text-lg">punjab</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">300</p>
@@ -493,9 +449,7 @@ const SellerList = () => {
               <div className="flex justify-between mb-2">
                 <div className="flex items-center">
                   <div className="bg-gray-300 border rounded-lg p-5 mr-2"></div>
-                  <p className="text-black text-lg">
-                    haryana
-                  </p>
+                  <p className="text-black text-lg">haryana</p>
                 </div>
                 <div className="flex items-center">
                   <p className="mr-2">300</p>

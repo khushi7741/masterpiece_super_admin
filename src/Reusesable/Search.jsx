@@ -1,10 +1,15 @@
-import { IconAdjustmentsHorizontal, IconCalendar, IconSearch } from '@tabler/icons-react'
-import React from 'react'
+import {
+  IconAdjustmentsHorizontal,
+  IconCalendar,
+  IconSearch,
+} from "@tabler/icons-react";
+import React from "react";
 
 const Search = () => {
+  const HandleFilters = () => {};
   return (
     <div>
-        <div className="flex justify-between mb-6">
+      <div className="flex justify-between mb-6">
         <div className="flex relative border border-light-gray rounded-md">
           <input
             type="text"
@@ -20,14 +25,16 @@ const Search = () => {
               selected dates
             </p>
           </div>
-          <div className="flex border border-light-gray rounded-md items-center">
-            <IconAdjustmentsHorizontal className="h-6 w-6 text-gray-500 ml-2" />
-            <p className="capitalize px-2 text-gray-500 font-medium">filters</p>
-          </div>
+          <button
+            onClick={HandleFilters}
+            className="flex border border-light-gray rounded-md items-center p-1.5 font-medium px-2 text-gray-500"
+          >
+            <IconAdjustmentsHorizontal className="h-6 w-6 mr-2" /> filters
+          </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

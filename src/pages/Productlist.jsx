@@ -10,6 +10,7 @@ import Search from "../Reusesable/Search";
 import Pagination5 from "../Reusesable/Pagination5";
 
 const Productlist = () => {
+  const HandleExport = () => {};
   let productdetail = [
     {
       img: "/images/Admin/products/choli.png",
@@ -129,15 +130,12 @@ const Productlist = () => {
             </div>
           </div>
           <div className="flex items-end text-gray-500">
-            <div className="bg-brown/20 flex p-1.5 rounded-lg">
-              <IconFileExport className="h-7 w-6 mr-1" />
-              <p className="text-lg">export</p>
-            </div>
+          <button onClick={HandleExport} className="bg-brown/20 flex p-1.5 rounded-lg text-lg text-gray-500"><IconFileExport className="h-7 w-6 mr-1" /> export</button>
           </div>
         </div>
         <Search />
         <div className="border border-light-gray rounded-lg mb-14">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-x-custom">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-100 text-black/70 text-lg text-left text-nowrap">
